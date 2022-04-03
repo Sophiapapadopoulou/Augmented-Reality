@@ -1,9 +1,9 @@
 # Lesson: Interaction Design
 
-### First and Last Name: xxx
-### University Registration Number: dpsdxxxxx
-### GitHub Personal Profile: xxx
-### Augmented Reality Personal Repository: xxx
+### First and Last Name: ΣΟΦΙΑ ΠΑΠΑΔΟΠΟΥΛΟΥ
+### University Registration Number: dpsd19095
+### GitHub Personal Profile: https://github.com/Sophiapapadopoulou
+### Augmented Reality Personal Repository: https://github.com/Sophiapapadopoulou/Augmented-Reality
 
 # Introduction
 
