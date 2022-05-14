@@ -35,13 +35,17 @@
         </a-marker>  
 
 <a-marker id="hydrogen" type="pattern" url="./assets/pattern-card-H.patt">
-        <a-entity gltf-model="url(/assets/scene.gltf)"></a-entity>
+       
+    <a-assets>
+        <a-asset-items id="random" src="/assets/scene.gltf"></a-asset-items>
+        </a-assets>
+    <a-entity gltf-model="#random"></a-entity>
         </a-marker>
 
 
 
         <a-marker id="oxygen" type="pattern" url="./assets/pattern-card-O.patt">
-           <a-entity gltf-model="url(/assets/scene.gltf)"></a-entity>
+       
             
         </a-marker>
 
