@@ -54,13 +54,60 @@
 
 
         <a-marker id="oxygen" type="pattern" url="./assets/pattern-card-O.patt">
-       
-            
+             <a-entity gltf-model="url(./assets/oxygen.gltf)"></a-entity>
         </a-marker>
 
 
 
+<script>
+    AFRAME.registerComponent("marker-distance", {
+        tick: function () {
+        this.markerDistance()
+        
+    },
+    
+        markerDistance: function() {
+              var hydrogenPos, oxygenPos
 
+        
+              this.box1=document.querySelector("#box1")
+            this.box2=document.querySelector("#box2")
+            this.box3=document.querySelector("#box3")
+              var hydrogen = document.querySelector("#hydrogen")
+        var oxygen = document.querySelector("#oxygen")
+
+        hydrogenPos = new THREE.Vector3();
+        hydrogen.object3D.getWorldPosition(hydrogenPos);
+
+        oxygenPos = new THREE.Vector3();
+        oxygen.object3D.getWorldPosition(oxygenPos);
+            this.d = hydrogenPos.distanceTo(oxygenPos);
+        console.log("distance" + this.d)
+            
+           var markerDistance=hydrogenPos.distanceTo(oxygenPos);
+    }
+   
+       
+        if (markerDistance<2) 
+        {
+        
+        this.box1.setAttribute("visible", false)
+            this.box2.setAttribute("visible", false)
+            this.box3.setAttribute("visible", true)
+        
+        }
+   else 
+   {
+    this.box1.setAttribute("visible", true)
+       this.box2.setAttribute("visible", true)
+       this.box3.setAttribute("visible", false)
+   }
+     
+    });
+     </script>
+
+        
+        
 
         <a-entity camera></a-entity>
 
