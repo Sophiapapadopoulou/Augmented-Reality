@@ -20,14 +20,27 @@
 
 <script src="build/aframe-speech-command-component.js"></script>
 
-
-
+    
 
 <body style="margin : 0px; overflow: hidden;">
 
     <a-scene vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;" embedded arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
 
-
+<a-marker preset="hiro">
+            <a-entity particle-system="preset: snow; particleCount: 100000"></a-entity>
+            <a-entity particle-system="preset: default; color: #515; particleCount: 1000" position="0 0 -5"></a-entity>
+            <a-entity id="box" geometry="primitive: box; width: 0.2; depth: 0.2; height: 0.2" position="0 0 0"
+                material="color: #4CC3D9"></a-entity>
+            <a-entity id="sphere" geometry="primitive: sphere; width:0.2; depth:0.4; height:0.2. " position="0 1.25 -5"
+                radius="1.25" material="color: #EF2D5E"></a-entity>
+            <a-entity id="cylinder" geometry="primitive: cylinder;  width:0.1 .; depth:0.3; height:0.2 "
+                position="0 0 0" radius="0.5" material="color: #FFC65D"></a-entity>
+            <a-entity id="annyang" annyang-speech-recognition></a-entity>
+            <a-entity position="0 2.25 -15" particle-system="preset: snow; particleCount: 10000000" visible="true"
+                speech-command__start="command: start; type: attribute; attribute: visible; value: true;"
+                speech-command__stop="command: stop; type: attribute; attribute: visible; value: false;">
+            </a-entity>
+        </a-marker>
 
         <a-marker type="pattern" url="./assets/MY-MARKER.patt">
 <a-text value="SOFIA PAPADOPOULOU"></a-text>
